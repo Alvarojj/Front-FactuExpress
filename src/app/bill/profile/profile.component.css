@@ -1,0 +1,39 @@
+.content{
+    padding-right: 150px;
+    padding-left: 150px;
+    margin-top: 10px;
+}
+.centrar {
+    text-align: center;
+}
+
+.img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+}
+
+.content p {
+    
+}
+
+.name {
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.id {
+    font-size: 30px;
+    margin-top: 30px;
+}
+.flex {
+    display: flex;
+    text-align: end;    
+}
+.phone {
+    font-size: 20px;
+}
+.mail {
+    font-size: 20px;
+}
