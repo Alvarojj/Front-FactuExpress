@@ -3,6 +3,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 
+
 @Component({
   selector: 'app-aftermain',
   standalone: true,
@@ -11,5 +12,5 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './aftermain.component.css'
 })
 export class AftermainComponent {
-
+  show:any = false
 }

@@ -1,17 +1,19 @@
-<mat-toolbar class="mat">
-    <span>FactExpress</span>
+<div class="background">
+  <mat-toolbar class="mat">
+    <span></span>
     <span class="remaining-space"></span>
-    <a mat-button> Registrate </a>
-    <button mat-raised-button color="primary"> login </button>
+    <a  class="register"> Registrate </a>
+    <button mat-raised-button> login </button>
   </mat-toolbar>
-  
+
   <div class="principal">
-    <h1 class="emblema"> Ten tus facturas siempre
-    <br class="separa">
-    a la mano </h1>
+    <h1 class="emblema"> FactuExpress</h1>
+    <p class="separa subembllema">Luchamos por un mundo libre de papel malgastado</p>
   
   </div>
-  
+</div> 
+
+@if (show) {
   <div class="proposito">
     <div class="textPro">
       <h2 class="subtituloPro">Nuestro proposito.</h2>
@@ -55,3 +57,5 @@
     <p> Hecho por estudiantes de la universidad <br> simon bolivar </p>
   
   </footer>
+}
+  

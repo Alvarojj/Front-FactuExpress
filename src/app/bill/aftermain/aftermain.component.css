@@ -1,23 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Satisfy&family=Tangerine:wght@400;700&display=swap');
 
 .remaining-space {
   flex: 1 1 auto;
 }
+.background {
+  background-image: url(../../../assets/background.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
 .mat{
   padding-left: 150px;
   padding-right: 150px;
+  background: none;
+}
+.register{
+  color: #ffff  ;
+  margin-right: 20px;
+}
+.principal{
+  width: 800px;
+  height: 200px;
+  margin-left: 50px;
+  position: absolute;
+  bottom: 60px;
+  padding: 40px;
 }
 .emblema{
-  height: 700px;
-  font-size: 80px;
+  font-size: 120px;
+  color: #ffff;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: "Poetsen One", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+
+}
+.subembllema{
+  color: #ffff;
+  font-size: 50px;
+  line-height: 50px;
+  font-family: "Satisfy", cursive;
   font-weight: 400;
   font-style: normal;
+  margin-left: 15px;
 }
 .separa{
   margin-top: 50px;
