@@ -14,7 +14,7 @@ import { ServiceService } from '../../shared/service/service.service';
 export class ProfileComponent implements OnInit{
   constructor(private service:ServiceService) {}
   ngOnInit(): void {
-    this.service.getInfoUser()
+    this.service.getInfoUser(1)
     .subscribe((response: any) => {
       console.log(response);
     })

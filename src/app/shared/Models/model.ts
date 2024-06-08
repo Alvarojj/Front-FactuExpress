@@ -2,7 +2,7 @@ export class usuario {
     id?:number;
     apellido?:String;
     cedula?:String;
-    correo?:String;
+    correo?:any;
     departamento?:String;
     direccion?:String;
     fecha?:String;
