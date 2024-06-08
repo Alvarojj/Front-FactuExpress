@@ -3,7 +3,7 @@
     <span></span>
     <span class="remaining-space"></span>
     <a  class="register"> Registrate </a>
-    <button mat-raised-button> login </button>
+    <button mat-raised-button (click)="login()"> login </button>
   </mat-toolbar>
 
   <div class="principal">
@@ -14,48 +14,6 @@
 </div> 
 
 @if (show) {
-  <div class="proposito">
-    <div class="textPro">
-      <h2 class="subtituloPro">Nuestro proposito.</h2>
-      <p class="proText"> Esta es una herramienta desarrollada para proteger el medio ambiente, disminuir el uso de papel en las facturas y brindar una mejor organizacion financiera </p>
-      <br>
-      <p class="proText"> Esta es una herramienta desarrollada para proteger el medio ambiente, disminuir el uso de papel en las facturas y brindar una mejor organizacion financiera Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ipsam odit qui voluptas, dolorem explicabo? Accusantium, aliquid quas labore commodi recusandae atque velit rem necessitatibus perferendis maiores distinctio hic sit?</p>
-      <br>
-      <p class="proText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit deleniti tempora asperiores amet, aut est debitis ipsa neque, cum necessitatibus aliquid iste obcaecati quibusdam earum expedita sunt, praesentium assumenda itaque.</p>
-    </div>
-   <div class="imgMedio">
-    <img src="./../assets/imgprincipal.jpg"/>
-   </div>
-  </div>
   
-  <div class="funcionalidades">
-    <h2> Funcionalidades.</h2>
-    <div class="lista">
-      <div>
-        <ul class="primeralista">
-          <li> Centraliza tus facturas </li>
-          <li> Organiza tus facturas </li>
-          <li> Observa tus gastos mensuales </li>
-          <li> Predicciones de tus gastos al siguiente mes </li>
-        </ul>
-      </div>
-      <div>
-        <ul class="segundalista">
-          <li> Centraliza tus facturas </li>
-          <li> Organiza tus facturas </li>
-          <li> Observa tus gastos mensuales </li>
-          <li> Predicciones de tus gastos al siguiente mes </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <footer class="footer">
-  
-    <p> Copyright 2024 FactuExpres </p>
-    <br>
-    <p> Hecho por estudiantes de la universidad <br> simon bolivar </p>
-  
-  </footer>
 }
   
