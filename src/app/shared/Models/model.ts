@@ -20,6 +20,7 @@ export class comercio {
     municipio?:String;
     razon?:String;
     telefono?:String;
+    factura:factura[] = [];
 }
 
 export class factura {
@@ -29,7 +30,6 @@ export class factura {
    numeroFactura?:number;
    subtotal?:number;
    total?:number;
-   comercio?:comercio;
    usuario?:usuario;
    productos?:producto[];
 }

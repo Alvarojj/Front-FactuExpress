@@ -1,70 +1,41 @@
 <div class="background">
   <app-nav-bar />
   <div class="mat">
-      <app-list-mon-year />
+      <app-list-mon-year (dates)="recibirDatoDelHijo($event)"/>
       <mat-accordion >
+        @for (comercio of comercios; track $index) {
           <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-              
-            <mat-panel-title>
-              Olimpica S.A.S
-            </mat-panel-title>
-            <mat-panel-description>
-              <p>Nro facturas: 2</p>
-            </mat-panel-description>
-            <mat-panel-description>
-              <p>Total todas las facturas: 100.000</p>          
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <ng-template matExpansionPanelContent>
-              <mat-list>
-                  <mat-list-item>
-                    <h3 matListItemTitle>Nro factura 4524</h3>
-                    <p matListItemMeta > Fecha: 01/05/2024</p>
-                    <p matListItemMeta > total factura: 60.000</p>
-                    <app-dialog-detalle matListItemMeta/>
-                  </mat-list-item>
-                  <mat-divider></mat-divider>
-                  <mat-list-item>
-                    <h3 matListItemTitle>Nro factura 452425</h3>
-                    <p matListItemMeta > Fecha: 03/05/2024</p>
-                    <p matListItemMeta > total factura: 40.000</p>
-                    <app-dialog-detalle matListItemMeta/>
-                  </mat-list-item>
-              </mat-list> 
-          </ng-template>  
-        </mat-expansion-panel>
-  
-  
-  
-        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-          <mat-expansion-panel-header>
-              
-            <mat-panel-title>
-              D1 S.A.S
-            </mat-panel-title>
-            <mat-panel-description>
-              <p>Nro facturas: 1</p>
-            </mat-panel-description>
-            <mat-panel-description>
-              <p>Total todas las facturas: 50.000</p>          
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <ng-template matExpansionPanelContent>
-              <mat-list>
-                  <mat-list-item>
-                    <h4 matListItemTitle>Nro factura: 3241</h4>
-                    <p matListItemMeta > Fecha: 01/05/2024</p>
-                    <p matListItemMeta > total factura: 50.000</p>
-                    <app-dialog-detalle matListItemMeta/>
-                  </mat-list-item>
-                  <mat-divider></mat-divider>
-              </mat-list> 
-          </ng-template>  
-        </mat-expansion-panel>
+            <mat-expansion-panel-header>
+                
+              <mat-panel-title>
+                {{comercio.razon}}
+              </mat-panel-title>
+              <mat-panel-description>
+                <p>Nro facturas: {{ comercio.factura.length }}</p>
+              </mat-panel-description>
+              <mat-panel-description>
+                <p>Total todas las facturas: </p>          
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <mat-list>
+                  @for (factura of comercio.factura; track $index) {
+                    <mat-list-item>
+                      <h3 matListItemTitle>Nro factura {{factura.numeroFactura}}</h3>
+                      <p matListItemMeta > Fecha: {{factura.fecha}}</p>
+                      <p matListItemMeta > total factura: {{factura.total}}</p>
+                      <app-dialog-detalle matListItemMeta/>
+                    </mat-list-item>
+                  }
+                </mat-list> 
+            </ng-template>  
+          </mat-expansion-panel>
 
+        }
+        
       </mat-accordion>
   </div>
 </div>
+
 
 

@@ -29,4 +29,8 @@ export class ServiceService {
   postUsuario(usuario:usuario): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/usuario`, usuario)
   }
+
+  getFacturas(id:any, fecha:any): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/factura/${id}/${fecha}`)
+  }
 }
