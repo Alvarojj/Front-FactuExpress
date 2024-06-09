@@ -7,6 +7,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { Auth } from '@angular/fire/auth';
+import { DatePipe } from '@angular/common';
 
 
 export const appConfig: ApplicationConfig = {
@@ -22,6 +23,7 @@ export const appConfig: ApplicationConfig = {
       messagingSenderId: "289087597581",
       appId: "1:289087597581:web:0065b30ff8998e650ff944"
      })),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    DatePipe
   ]
 };

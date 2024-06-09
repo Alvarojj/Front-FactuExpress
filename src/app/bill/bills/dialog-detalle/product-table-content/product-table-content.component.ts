@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { producto } from '../../../../shared/Models/model';
 export interface PeriodicElement {
   id: number;
   Descripcion: string;
@@ -22,7 +23,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './product-table-content.component.html',
   styleUrl: './product-table-content.component.css'
 })
-export class ProductTableContentComponent {
+export class ProductTableContentComponent implements OnInit{
   displayedColumns: string[] = ['id', 'Descripcion', 'Cantidad', 'Total'];
-  dataSource = ELEMENT_DATA;
+  producto: producto[] = [];
+  @Input() productos?: producto[];
+  dataSource = this.producto;
+
+  ngOnInit(): void {
+    if (this.productos) {
+      this.producto = this.productos
+      this.dataSource = this.producto
+    }
+  }
 }

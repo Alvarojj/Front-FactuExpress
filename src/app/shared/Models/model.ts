@@ -15,6 +15,7 @@ export class usuario {
 export class comercio {
     id?:number;
     int?:number;
+    nit:any = '';
     departamento?:String;
     direccion?:String;
     municipio?:String;
@@ -31,6 +32,7 @@ export class factura {
    subtotal?:number;
    total?:number;
    usuario?:usuario;
+   comercio?:comercio;
    productos?:producto[];
 }
 

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { DialogContentDetalleComponent } from './dialog-content-detalle/dialog-content-detalle.component';
+import { factura } from '../../../shared/Models/model';
 
 @Component({
   selector: 'app-dialog-detalle',
@@ -12,11 +13,14 @@ import { DialogContentDetalleComponent } from './dialog-content-detalle/dialog-c
 })
 export class DialogDetalleComponent {
   constructor(public dialog: MatDialog) {}
+  @Input() factura?:factura;
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogContentDetalleComponent,{
       height: 'auto',
       width: '550px',
+      data: this.factura
+      
     });
 
     dialogRef.afterClosed().subscribe(result => {

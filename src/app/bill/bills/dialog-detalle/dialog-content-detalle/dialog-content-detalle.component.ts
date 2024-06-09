@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { Component, Input, Inject, OnInit  } from '@angular/core';
+import {MatDialog, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import { ProductTableContentComponent } from '../product-table-content/product-table-content.component';
+import { factura } from '../../../../shared/Models/model';
 
 @Component({
   selector: 'app-dialog-content-detalle',
@@ -10,7 +11,13 @@ import { ProductTableContentComponent } from '../product-table-content/product-t
   templateUrl: './dialog-content-detalle.component.html',
   styleUrl: './dialog-content-detalle.component.css'
 })
-export class DialogContentDetalleComponent {
-  
+export class DialogContentDetalleComponent implements OnInit {
+  factura?: any;
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { factura: factura | undefined}) {
+    this.factura = this.data;
+  }
+
+  ngOnInit(): void {
+  }
 
 }

@@ -1,25 +1,25 @@
 
 <mat-dialog-content class="mat-typography">
-  <h1 mat-dialog-title class="title">Olimpica S.A.S</h1>
+  <h1 mat-dialog-title class="title">{{factura.comercio?.razon}}</h1>
   <div class="header">
-    <p>Nit: 10983654014560 Grandes contribuyentes</p>
-    <p>Telefono: 982745608245</p>
-    <p>direccion: calle 33 #8-74 Atlantico</p>
-    <p>Nro Factura: 345235</p>
-    <p>fecha: 19/12/2023</p>
+      <p>Nit: {{factura?.comercio?.nit}} Grandes contribuyentes</p>
+    <p>Telefono: {{factura.comercio?.telefono}}</p>
+    <p>direccion: {{factura.comercio?.direccion}} {{factura.comercio?.departamento}}</p>
+    <p>Nro Factura: {{factura.numeroFactura}}</p>
+    <p>fecha: {{factura.fecha}}</p>
   </div>
   <div class="productos">
     <h3>Productos</h3>
-    <app-product-table-content />
+    <app-product-table-content [productos]="factura.productos"/>
   </div>
   <div class="totales">
-    <h3>Sub total: 982750984</h3>
-    <h3>Iva: 982750984</h3>
-    <h2>Total: 982750984</h2>
+    <h3>Sub total: {{factura.subtotal}}</h3>
+    <h3>Iva:  {{factura.iva}}</h3>
+    <h2>Total: {{factura.total}}</h2>
   </div>
 
   
-</mat-dialog-content>
+</mat-dialog-content > 
 
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cerrar</button>

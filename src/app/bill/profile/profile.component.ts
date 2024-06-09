@@ -13,10 +13,26 @@ import { ServiceService } from '../../shared/service/service.service';
 })
 export class ProfileComponent implements OnInit{
   constructor(private service:ServiceService) {}
+  info:any;
+  numfac:any;
+  ahorro:any;
   ngOnInit(): void {
-    this.service.getInfoUser(1)
+    this.service.getInfoUser(localStorage.getItem("Id"))
     .subscribe((response: any) => {
-      console.log(response);
+      this.info = response;
     })
+
+    this.service.getNumeroFacturas(localStorage.getItem("Id"))
+    .subscribe((response: any) => {
+      this.numfac = response.length;
+      console.log(response)
+    })
+
+    this.service.getAhorro(localStorage.getItem("Id"))
+    .subscribe((response: any) => {
+      this.ahorro = response;
+      console.log(response)
+    })
+
   }
 }

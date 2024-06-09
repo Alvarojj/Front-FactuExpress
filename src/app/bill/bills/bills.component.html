@@ -24,7 +24,7 @@
                       <h3 matListItemTitle>Nro factura {{factura.numeroFactura}}</h3>
                       <p matListItemMeta > Fecha: {{factura.fecha}}</p>
                       <p matListItemMeta > total factura: {{factura.total}}</p>
-                      <app-dialog-detalle matListItemMeta/>
+                      <app-dialog-detalle matListItemMeta [factura]="factura"/>
                     </mat-list-item>
                   }
                 </mat-list> 

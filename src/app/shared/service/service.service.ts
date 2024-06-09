@@ -33,4 +33,8 @@ export class ServiceService {
   getFacturas(id:any, fecha:any): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/factura/${id}/${fecha}`)
   }
+
+  getNumeroFacturas(id:any): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/factura/${id}`)
+  }
 }
